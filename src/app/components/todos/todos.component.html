@@ -1,0 +1,29 @@
+<div class="d-flex flex-column align-items-center justify-content-center">
+    <h1 class="text-center mt-5">TODOS</h1>
+  
+  
+    <input type="text" [(ngModel)]="searchText" placeholder="Search by title..." class="search-input mb-4" />
+  
+
+    <div class="d-flex justify-content-center w-100 tablediv">
+      <table class="table table-bordered" style="width: 80%;"> 
+        <thead class="table-dark">
+          <tr>
+            <th>User ID</th>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Completed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let todo of filteredTodos" >
+            <td>{{ todo.userId }}</td>
+            <td>{{ todo.id }}</td>
+            <td>{{ todo.title }}</td>
+            <td>{{ todo.completed }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
